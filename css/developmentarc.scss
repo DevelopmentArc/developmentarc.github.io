@@ -1,0 +1,318 @@
+---
+---
+
+$header-background-color: #f3f1f2;
+$text-color: #121930;
+$devarc-blue-color: #40BFE2;
+$header-height: 50px;
+$background-image-size: 2800px;
+
+@mixin calc-rem-with-px-fallback( $font-size ) {
+	font-size: $font-size * 1px;
+	font-size: $font-size/10 * 1rem;
+}
+
+html, body {
+  position: relative;
+  background-color: $text-color;
+  color: $text-color;
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  color: $devarc-blue-color;
+
+  &:hover { color: $devarc-blue-color };
+  &:visited { color: $devarc-blue-color };
+}
+
+.callout {
+  color: $devarc-blue-color;
+}
+
+.bar-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
+}
+
+h1, h2, h3 {
+  font-family: 'Avenir Next', 'Nunito', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  @include calc-rem-with-px-fallback( 48 );
+  border-bottom: 2px solid $devarc-blue-color;
+  font-family: 'Avenir Next', 'Nunito', sans-serif;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.content-box {
+  @extend .bar-shadow;
+  @include calc-rem-with-px-fallback( 16 );
+  z-index: 10;
+  background-color: rgba(243, 241, 242, .85);
+  margin-top: 150px;
+  padding-top: 10px 20px;
+
+  p {
+    padding: 10px 0;
+  }
+}
+
+header {
+  @extend .bar-shadow;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  background-color: $header-background-color;
+
+  height: $header-height;
+  padding: 0 20px;
+  width: 100%;
+
+  .logo-name {
+    @include calc-rem-with-px-fallback( 28 );
+    font-family: 'Avenir Next', 'Nunito', sans-serif;
+    font-weight: bold;
+    line-height: $header-height;
+    text-transform: uppercase;
+  }
+
+  .logo-callout > sup {
+    @include calc-rem-with-px-fallback( 16 );
+  }
+
+  a {
+    color: $text-color;
+    &:hover {
+      color: $text-color;
+      text-decoration: none;
+    }
+    &:visited { color: $text-color; }
+  }
+
+  .shortcuts > a {
+    @include calc-rem-with-px-fallback( 18 );
+    font-family: 'Avenir Next', 'Nunito', sans-serif;
+    font-weight: bold;
+    color: $text-color;
+    line-height: $header-height;
+    padding: 0 20px;
+    &:hover {
+      color: $devarc-blue-color;
+      text-decoration: none;
+    }
+    &:visited { color: $text-color; }
+  }
+}
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .bg-landing {
+    background: url(../images/landing.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .logo-hero {
+    -webkit-filter: drop-shadow( 0 2px 3px rgba(0, 0, 0, .4) );
+            filter: drop-shadow( 0 2px 3px rgba(0, 0, 0, .4) );
+    position: absolute;
+    top: $header-height + 20px;
+    left: 0;
+    right: 0;
+    height: 65%;
+    background: url(../images/devarc.svg) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+  .banner {
+    @extend .bar-shadow;
+    background-color: rgba(243, 241, 242, .8);
+    padding: 20px 0;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+  }
+
+  .banner > .content {
+    @include calc-rem-with-px-fallback( 40 );
+    font-family: 'Avenir Next', 'Nunito', sans-serif;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    width: 730px;
+  }
+}
+
+.guide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .bg-guide {
+    background: url(../images/guide.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.services {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .bg-services {
+    background: url(../images/services.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.contact {
+  color: $header-background-color;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding-top: $header-height;
+
+  h1 {
+    padding-top: 90px;
+    border: none;
+  }
+
+  .contact-us {
+    @include calc-rem-with-px-fallback( 18 );
+  }
+
+  .headshot {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 2px solid $header-background-color;
+    border-radius: 100px;
+    margin: 0 20px 5px 0;
+  }
+
+  .headshot-aaron {
+    background: url(../images/aaron-200px.jpg) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+  .headshot-james {
+    background: url(../images/james-200px.jpg) no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+  }
+
+  .profile {
+    margin: 40px 0 60px;
+
+    .name {
+      @include calc-rem-with-px-fallback( 24 );
+      font-weight: bold;
+    }
+
+    .title {
+      @include calc-rem-with-px-fallback( 18 );
+      font-style: italic;
+    }
+
+    .description {
+      margin-top: 5px;
+    }
+  }
+}
+
+footer {
+  @include calc-rem-with-px-fallback( 12 );
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  color: $header-background-color;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  z-index: 1000;
+  text-align: right;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .landing {
+    .banner > .content {
+      @include calc-rem-with-px-fallback( 20 );
+      font-family: 'Avenir Next', 'Nunito', sans-serif;
+      font-weight: bold;
+      margin: auto;
+      text-align: center;
+      width: 320px;
+    }
+  }
+
+  h1 {
+    @include calc-rem-with-px-fallback( 28 );
+  }
+
+  .content-box {
+    @include calc-rem-with-px-fallback( 14 );
+    background-color: rgb(243, 241, 242);
+    margin-top: $header-height + 10px;
+    padding-top: 10px 20px;
+
+    p {
+      padding: 5px 0;
+    }
+  }
+
+  .contact {
+    padding-top: 70px;
+  }
+
+  footer {
+    @include calc-rem-with-px-fallback( 9 );
+  }
+}
