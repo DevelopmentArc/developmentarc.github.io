@@ -139,6 +139,7 @@ header {
     left: 0;
     right: 0;
     height: 65%;
+    width: 100%;
     background: url(../images/devarc.svg) no-repeat center center;
     -webkit-background-size: contain;
     -moz-background-size: contain;
@@ -282,6 +283,10 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  header {
+    .shortcuts { display: none; }
+  }
+
   .landing {
     .banner > .content {
       @include calc-rem-with-px-fallback( 20 );
