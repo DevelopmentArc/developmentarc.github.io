@@ -283,10 +283,6 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-  header {
-    .shortcuts { display: none; }
-  }
-
   .landing {
     .banner > .content {
       @include calc-rem-with-px-fallback( 20 );
@@ -298,8 +294,22 @@ footer {
     }
   }
 
+  header .shortcuts,
+  .bg-guide,
+  .bg-services {
+    display: none;
+  }
+
+  .contact {
+    padding-top: 0;
+    h1 {
+      padding-top: 0;
+    }
+  }
+
+
   h1 {
-    @include calc-rem-with-px-fallback( 28 );
+    @include calc-rem-with-px-fallback( 24 );
   }
 
   .content-box {
