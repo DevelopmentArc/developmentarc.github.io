@@ -61,6 +61,15 @@ h1 {
   }
 }
 
+.details-display {
+  background: rgba(243, 241, 242, 0.85);
+  margin-bottom: 40px;
+  padding: 20px;
+  position: absolute;
+  top: 120px;
+  width: 750px;
+}
+
 header {
   @extend .bar-shadow;
 
@@ -204,6 +213,10 @@ header {
     right: 0;
     bottom: 0;
   }
+
+  .details-display {
+    right: 0;
+  }
 }
 
 .contact {
@@ -214,7 +227,7 @@ header {
   padding-top: $header-height;
 
   h1 {
-    padding-top: 90px;
+    padding-top: 40px;
     border: none;
   }
 
@@ -281,7 +294,7 @@ footer {
   text-align: right;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 736px) {
   .landing {
     .banner > .content {
       @include calc-rem-with-px-fallback( 20 );
@@ -291,6 +304,18 @@ footer {
       text-align: center;
       width: 320px;
     }
+  }
+
+  .details-display {
+    position: relative;
+    width: inherit;
+    top: auto;
+  }
+
+  .services,
+  .guide {
+    height: auto;
+    min-height: auto;
   }
 
   header .shortcuts,
@@ -320,10 +345,6 @@ footer {
     p {
       padding: 5px 0;
     }
-  }
-
-  .contact {
-    padding-top: 70px;
   }
 
   footer {
