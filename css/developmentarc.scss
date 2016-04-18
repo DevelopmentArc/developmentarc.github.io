@@ -1,6 +1,7 @@
 ---
 ---
 
+$white: #fff;
 $header-background-color: #f3f1f2;
 $text-color: #121930;
 $devarc-blue-color: #40BFE2;
@@ -112,7 +113,7 @@ header {
     font-weight: bold;
     color: $text-color;
     line-height: $header-height;
-    padding: 0 20px;
+    padding: 0 15px;
     &:hover {
       color: $devarc-blue-color;
       text-decoration: none;
@@ -219,6 +220,72 @@ header {
   }
 }
 
+.clients {
+  background-color: $white;
+  padding: 50px;
+
+  .logos {
+    padding: 80px 30px;
+    text-align: center;
+  }
+
+  .logo {
+    display: inline-block;
+    height: 100px;
+    width: 150px;
+    margin: 20px;
+  }
+
+  .adobe {
+    background: url(../images/logos/adobe.png) no-repeat center center;
+  }
+
+  .avaak {
+    background: url(../images/logos/avaak-logo.jpg) no-repeat center center;
+  }
+
+  .bluekai {
+    background: url(../images/logos/bluekai.gif) no-repeat center center;
+  }
+
+  .corelogic {
+    background: url(../images/logos/corelogic-logo.png) no-repeat center center;
+  }
+
+  .dhap {
+    background: url(../images/logos/dhap.png) no-repeat center center;
+  }
+
+  .digitalthrottle {
+    background: url(../images/logos/digital-throttle.png) no-repeat center center;
+  }
+
+  .fitstar {
+    background: url(../images/logos/fitstarlogo.png) no-repeat center center;
+  }
+
+  .jloop {
+    background: url(../images/logos/logo-jloop.png) no-repeat center center;
+  }
+
+  .lucilles {
+    background: url(../images/logos/lucilles_logo.png) no-repeat center center;
+  }
+
+  .pedanco {
+    background: url(../images/logos/pedanco.png) no-repeat center center;
+  }
+
+  .vmware {
+    background: url(../images/logos/vm-ware.jpg) no-repeat center center;
+  }
+
+  .yahoo {
+    background: url(../images/logos/yahoo.png) no-repeat center center;
+  }
+
+}
+
 .contact {
   color: $header-background-color;
   position: relative;
@@ -322,6 +389,19 @@ footer {
   .bg-guide,
   .bg-services {
     display: none;
+  }
+
+  .clients {
+    padding: 10px 10px;
+
+    .logos {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .logo {
+      margin: 10px;
+    }
   }
 
   .contact {
